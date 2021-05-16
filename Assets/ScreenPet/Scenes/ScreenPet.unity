@@ -529,7 +529,6 @@ GameObject:
   - component: {fileID: 929478370}
   - component: {fileID: 929478369}
   - component: {fileID: 929478368}
-  - component: {fileID: 929478367}
   - component: {fileID: 929478366}
   - component: {fileID: 929478372}
   - component: {fileID: 929478371}
@@ -562,21 +561,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &929478367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929478365}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2db23f10632cff4a97bf10cffde0c9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1870141764}
-  followSpeed: 100
-  waypointDistance: 3
 --- !u!58 &929478368
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -587,7 +571,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.35}

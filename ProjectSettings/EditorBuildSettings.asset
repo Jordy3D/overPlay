@@ -5,10 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/ScreenPet/Scenes/ScreenPetScene.unity
-    guid: 1b3d6d97475f2a847871e005ddbce02e
+    path: Assets/ScreenPet/Scenes/ScreenPet.unity
+    guid: 737f4d5abc4fc604c863a83a08381b2c
   m_configObjects: {}
