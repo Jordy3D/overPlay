@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: d9efda0d8836108458593eefc8567aa4, type: 3}
+  iconMaxWidth: 128
+  title: Transparent Window
+  sections:
+  - heading: Welcome!
+    text: 'This should help you make transparent window applications in Unity! This
+      has been created based on work from '
+    linkText: Code Monkey
+    url: https://www.youtube.com/channel/UCFK6NCbuCIVzA6Yj1G_ZqCg
+  - heading: 
+    text: with changes from That1PumpkinGirl
+    linkText: 
+    url: 
+  - heading: 
+    text: 'and '
+    linkText: Bane
+    url: https://jordy3d.github.io/
+  - heading: '"Is there anything I need to do?"'
+    text: No! This has been set up by Bane so that it should "just work" when placed
+      into a scene!
+    linkText: 
+    url: 
+  loadedLayout: 1
