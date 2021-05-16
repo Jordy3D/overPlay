@@ -105,7 +105,11 @@ namespace TW
     public static bool IsPointerOverGameObject()
     {
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-      return Physics.Raycast(ray, out RaycastHit hit);
+      RaycastHit hit;
+      Physics.Raycast(ray, out hit);
+      if (hit.transform == null) 
+        return false;
+      return !hit.transform.CompareTag("IgnoreCursor");
     }
 
     /// <summary>
@@ -116,7 +120,9 @@ namespace TW
     {
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
-      return hit;
+      if (hit.transform == null)
+        return false;
+      return !hit.transform.CompareTag("IgnoreCursor");
     }
 
     /// <summary>

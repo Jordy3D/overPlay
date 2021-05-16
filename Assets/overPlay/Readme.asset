@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: d9efda0d8836108458593eefc8567aa4, type: 3}
   iconMaxWidth: 128
-  title: Transparent Window
+  title: overPlay
   sections:
   - heading: Welcome!
     text: 'This should help you make transparent window applications in Unity! This
