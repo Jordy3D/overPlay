@@ -12,7 +12,8 @@ namespace TW
     [DllImport("User32")] private static extern IntPtr GetActiveWindow();
     [DllImport("User32")] private static extern int SetWindowLong(IntPtr _hWnd, int _nIndex, uint _dwNewLong);
     [DllImport("User32", SetLastError = true)] static extern bool SetWindowPos(IntPtr _hWnd, IntPtr _hWindInsertAfter, int _x, int _y, int _cx, int _cy, uint _uFlags);
-    [DllImport("Dwmapi.dll")] private static extern uint DwmExtendFrameIntoClientArea(IntPtr _hWnd, ref Margins _margins); 
+    [DllImport("Dwmapi.dll")] private static extern uint DwmExtendFrameIntoClientArea(IntPtr _hWnd, ref Margins _margins);
+
     #endregion
     private struct Margins
     {
@@ -73,7 +74,7 @@ namespace TW
     /// <summary>
     /// Disables the Flip Model Swapchain setting in PlayerSettings
     /// </summary>
-    public static void DisableFlipModelSwapchain() => UnityEditor.PlayerSettings.useFlipModelSwapchain = false; 
+    public static void DisableFlipModelSwapchain() => UnityEditor.PlayerSettings.useFlipModelSwapchain = false;
 #endif
   }
 
@@ -89,7 +90,7 @@ namespace TW
       eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
       List<RaycastResult> rayObjects = new List<RaycastResult>();
       EventSystem.current.RaycastAll(eventDataCurrentPosition, rayObjects);
-      
+
       List<RaycastResult> results = new List<RaycastResult>();
       foreach (var rayObject in rayObjects)
         if (!rayObject.gameObject.CompareTag("IgnoreCursor"))
@@ -107,7 +108,7 @@ namespace TW
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       RaycastHit hit;
       Physics.Raycast(ray, out hit);
-      if (hit.transform == null) 
+      if (hit.transform == null)
         return false;
       return !hit.transform.CompareTag("IgnoreCursor");
     }
@@ -152,5 +153,5 @@ namespace TW
       cursorPos.z = Camera.main.nearClipPlane;
       return Camera.main.ScreenToWorldPoint(cursorPos);
     }
-  } 
+  }
 }
