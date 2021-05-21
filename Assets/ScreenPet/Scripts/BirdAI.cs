@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 using Pathfinding;
 using TW;
@@ -26,6 +27,11 @@ namespace ScreenPet
     public Transform[] eatPoints;
 
     public bool isEating;
+
+
+    public UnityEvent onClickEvent, onSearchEvent, onEatEvent;
+
+
     float eatTimer = 0;
     float hungerTimer = 0;
 
@@ -60,7 +66,10 @@ namespace ScreenPet
             return;
           }
           if (Random.Range(0, 4) == 0)
+          {
+            onEatEvent.Invoke();
             sprite.flipX = !sprite.flipX; // Eat on the same spot, but face the other direction
+          }
 
           eatTimer = 0;
           animator.SetTrigger("Eat"); // Flag the animation to play the eating animation
@@ -80,10 +89,12 @@ namespace ScreenPet
     {
       isEating = true;
       destination.target = eatPoints[Random.Range(0, eatPoints.Length - 1)];
+
+      onSearchEvent.Invoke();
     }
 
     // Resets the AI target to the cursor, rather than an eatpoint, and defaults everything else
-    void ResetTarget()
+    public void ResetTarget()
     {
       hungerTimer = 0;
       isEating = false;
@@ -93,8 +104,8 @@ namespace ScreenPet
 
     void OnMouseDown()
     {
-      if (Input.GetMouseButtonDown(0))
-        ResetTarget();
+      if (Input.GetMouseButtonDown(0) && isEating)
+        onClickEvent.Invoke();
     }
   } 
 }

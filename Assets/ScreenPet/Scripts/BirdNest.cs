@@ -6,6 +6,7 @@ namespace ScreenPet
 {
   public class BirdNest : MonoBehaviour
   {
+    public ClickerManager manager;
     public GameObject birdPrefab;
 
     public Transform target;
@@ -33,6 +34,10 @@ namespace ScreenPet
         bird.eatPoints = eatPoints;
 
         birds.Add(bird);
+
+        bird.onClickEvent.AddListener(() => { bird.ResetTarget();  manager.IncreaseScore(5); });
+        bird.onSearchEvent.AddListener(() => { manager.IncreaseScore(manager.searchforPointsValue); });
+        bird.onEatEvent.AddListener(() => { manager.IncreaseScore(manager.peckforPointsValue); });
       }
     }
 
