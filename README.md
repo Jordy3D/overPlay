@@ -2,8 +2,8 @@
   <img src="https://github.com/Jordy3D/Overplay/blob/main/TaskbarBirds.png">
 </p>
 
-|<img width=200/>| | |
-|-|-|-|
+|<img width=150 height=0/>| |
+|-|-|
 <img src="https://github.com/Jordy3D/Overplay/blob/main/Assets/overPlay/UI/Icons/overPlay%20Icon.png" width="100" height="100">  |  Based on work from [Code Monkey](https://www.youtube.com/channel/UCFK6NCbuCIVzA6Yj1G_ZqCg), with my introduction to it from [BlackRiverStudio](https://github.com/BlackRiverStudio), this package will help you make transparent window applications in Unity!
 
 As it currently is, I would hesitate to call it "complete", however it is certainly more than usable.  
